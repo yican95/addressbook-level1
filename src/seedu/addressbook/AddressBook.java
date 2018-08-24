@@ -44,7 +44,7 @@ public class AddressBook {
     /**
      * Version info of the program.
      */
-    private static final String VERSION = "AddessBook Level 1 - Version 1.0";
+    private static final String VERSION = "AddressBook Level 1 - Version 1.0";
 
     /**
      * A decorative prefix added to the beginning of lines printed by AddressBook
@@ -473,7 +473,7 @@ public class AddressBook {
      * @return set of keywords as specified by args
      */
     private static Set<String> extractKeywordsFromFindPersonArgs(String findPersonCommandArgs) {
-        return new HashSet<>(splitByWhitespace(findPersonCommandArgs.trim()));
+        return new HashSet<>(splitByWhitespace(findPersonCommandArgs.toLowerCase().trim()));
     }
 
     /**
@@ -485,7 +485,7 @@ public class AddressBook {
     private static ArrayList<String[]> getPersonsWithNameContainingAnyKeyword(Collection<String> keywords) {
         final ArrayList<String[]> matchedPersons = new ArrayList<>();
         for (String[] person : getAllPersonsInAddressBook()) {
-            final Set<String> wordsInName = new HashSet<>(splitByWhitespace(getNameFromPerson(person)));
+            final Set<String> wordsInName = new HashSet<>(splitByWhitespace(getNameFromPerson(person).toLowerCase()));
             if (!Collections.disjoint(wordsInName, keywords)) {
                 matchedPersons.add(person);
             }
