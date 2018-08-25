@@ -81,6 +81,11 @@ Returns `John Doe` but not `john`
 * `find Betsy Tim John` +
 Returns any person having names `Betsy`, `Tim`, or `John`
 
+=== Sorting all entries: `sort`
+
+Sorts all entries from the address book in alphabetical order. +
+Format: `sort`
+
 === Deleting a person: `delete`
 
 Deletes the specified version from the address book. +
@@ -105,11 +110,6 @@ Deletes the 1st person in the results of the `find` command.
 
 Clears all entries from the address book. +
 Format: `clear`
-
-=== Sorting all entries: `sort`
-
-Sorts all entries from the address book in alphabetical order. +
-Format: `sort`
 
 === Exiting the program: `exit`
 
