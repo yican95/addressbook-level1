@@ -88,7 +88,7 @@ Format: `sort`
 
 === Deleting a person: `delete`
 
-Deletes the specified version from the address book. +
+Deletes the specified person from the address book. +
 Format: `delete INDEX`
 
 [NOTE]
@@ -105,6 +105,26 @@ Deletes the 2nd person in the address book.
 * `find Betsy` +
 `delete 1` +
 Deletes the 1st person in the results of the `find` command.
+
+=== Editing a person: `edit`
+
+Edits the specified person from the address book to the updated person. +
+Format: `edit INDEX NAME p/PHONE_NUMBER e/EMAIL`
+
+[NOTE]
+====
+The index refers to the index numbers shown in the most recent listing.
+====
+
+Examples:
+
+* `list` +
+`edit 2 John Doe p/98765432 e/johnd@gmail.com` +
+Edits the 2nd person in the address book to John Doe.
+
+* `find Betsy` +
+`edit 1 John Doe p/98765432 e/johnd@gmail.com` +
+Edits the 1st person in the results of the `find` command.
 
 === Clearing all entries: `clear`
 
