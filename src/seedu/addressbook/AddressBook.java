@@ -154,7 +154,7 @@ public class AddressBook {
 
     private enum PersonProperty {
         NAME, EMAIL, PHONE
-    };
+    }
 
     /**
      * Offset required to convert between 1-indexing and 0-indexing.COMMAND_
